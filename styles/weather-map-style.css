@@ -1,0 +1,29 @@
+.map-label {
+    text-align: center;
+    border: 2px solid #3b9861;
+}
+
+.weather-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+
+#weather-icon {
+    width: 100px; 
+    height: 100px;
+}
+
+#temperature {
+    font-size: 2rem;
+    color: #3b9861;
+    font-weight: bold;
+}
+
+#patio-status {
+    font-size: 1.5rem;
+    color: #3b9861;
+    padding-left: 2rem;
+}
+
+

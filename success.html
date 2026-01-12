@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-custom-carrilln.css">
+    <link rel="stylesheet" href="styles/style-menu-carrilln.css">
+    <meta charset="UTF-8">
+    <title>Order Receipt - NAC Bakery</title>
+</head>
+<body>
+    <header><h1 class="Title">NAC Bakery</h1></header>
+
+    <main style="max-width: 600px; margin: 40px auto; padding: 20px;">
+        <div class="receipt-card" style="background: #fff; padding: 30px; border: 1px solid #ddd; font-family: monospace; color: #333;">
+            <h2 style="text-align: center;">NAC BAKERY RECEIPT</h2>
+            <p><strong>Customer:</strong> <span id="rec-name"></span></p>
+            <p><strong>Date:</strong> <span id="rec-date"></span></p>
+            <p><strong>Dining:</strong> <span id="rec-dining"></span></p>
+            <hr style="border: 1px dashed #ccc;">
+            
+            <div id="receipt-items"></div>
+            
+            <hr style="border: 1px dashed #ccc;">
+            <div id="receipt-totals" style="text-align: right; line-height: 1.6;"></div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="index.html" style="text-decoration: none; background: #333; color: #fff; padding: 10px 20px; border-radius: 5px;">Return Home</a>
+        </div>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        
+        const priceMap = {
+            "Chicken Alfredo": 16.99, "Birria Tacos": 12.99, "Cheeseburger": 13.99, 
+            "Chicken Pesto Sandwhich": 11.99, "Iced Chai": 5.49, "Iced Matcha": 6.49, 
+            "Hot Coffee": 3.49, "Tres Leches Cake": 5.99, "Milhojas Slice": 6.49,
+            "extra cheese": 1.00, "extra meat": 3.00, "extra sauce": 0.00
+        };
+
+        const orderJson = params.get('orderJson');
+        if (orderJson) {
+            const order = JSON.parse(orderJson);
+            let subtotal = 0;
+
+            document.getElementById('rec-name').textContent = order.customer || "Guest";
+            document.getElementById('rec-date').textContent = order.date;
+            document.getElementById('rec-dining').textContent = order.delivery ? "Delivery" : "Pick-up/Eat-in";
+
+            const itemsDiv = document.getElementById('receipt-items');
+            
+            const categories = [
+                { items: order.entrees },
+                { items: order.drinks },
+                { items: order.desserts }
+            ];
+
+            categories.forEach(cat => {
+                if (cat.items) {
+                    cat.items.forEach(item => {
+                        const cost = priceMap[item.name] * item.quantity;
+                        subtotal += cost;
+                        itemsDiv.innerHTML += `<p style="display:flex; justify-content:space-between;">
+                            <span>${item.name} x${item.quantity}</span> 
+                            <span>$${cost.toFixed(2)}</span>
+                        </p>`;
+                    });
+                }
+            });
+
+            // Add-ons
+            if (order.addOns) {
+                order.addOns.forEach(addon => {
+                    const cost = priceMap[addon] || 0;
+                    subtotal += cost;
+                    itemsDiv.innerHTML += `<p style="display:flex; justify-content:space-between; color: #666;">
+                        <span>+ ${addon}</span> 
+                        <span>$${cost.toFixed(2)}</span>
+                    </p>`;
+                });
+            }
+
+            const tipAmount = subtotal * (order.tipPercent / 100);
+            const deliveryFee = order.delivery ? 3.00 : 0.00;
+            const total = subtotal + tipAmount + deliveryFee;
+
+            document.getElementById('receipt-totals').innerHTML = `
+                <p>Subtotal: $${subtotal.toFixed(2)}</p>
+                <p>Tip (${order.tipPercent}%): $${tipAmount.toFixed(2)}</p>
+                ${deliveryFee > 0 ? `<p>Delivery Fee: $3.00</p>` : ''}
+                <h3 style="margin-top: 10px; border-top: 2px solid #333; padding-top: 5px;">TOTAL: $${total.toFixed(2)}</h3>
+            `;
+        }
+    </script>
+</body>
+</html>

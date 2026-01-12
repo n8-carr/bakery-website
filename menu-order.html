@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-custom-carrilln.css">
+    <link rel="stylesheet" href="styles/style-menu-carrilln.css">
+    <meta charset="UTF-8">
+    <title>NAC Bakery - Menu </title>
+</head>
+<body>
+    <header>
+        <h1 class = "Title">NAC Bakery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a class="active" href="menu-order.html">Interactive Order</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-layout">
+        <main>
+            <h2>ENTREES</h2>
+            <section class="menu-grid entree-grid">
+                <div class="menu-item" data-category="entree" data-name="Chicken Alfredo" data-price="16.99">
+                    <img src="images/chicken-alfredo.jpg" alt="Chicken Alfredo" class="food-img">
+                    <h3>Chicken Alfredo</h3>
+                    <p>Creamy alfredo sauce with farm-range chicken and locally sourced broccoli</p>
+                    <p class="price">$16.99</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+            
+                <div class="menu-item" data-category="entree" data-name="Birria Tacos" data-price="12.99">
+                    <img src="images/birria-tacos.jpg" alt="Birria Tacos" class="food-img">
+                    <h3>Birria Tacos</h3>
+                    <p>Slow cooked beef with a side of consome and fresh corn tortillas - 4 Tacos included</p>
+                    <p class="price">$12.99</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="entree" data-name="Cheeseburger" data-price="13.99">
+                    <img src="images/cheeseburger.jpg" alt="Cheeseburger" class="food-img">
+                    <h3>Cheeseburger</h3>
+                    <p>1/2 lb. beef patty with lettuce, tomato, onion, and pickles</p>
+                    <p class="price">$13.99</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="entree" data-name="Chicken Pesto Sandwhich" data-price="11.99">
+                    <img src="images/chicken-sandwhich.jpg" alt="Chicken Pesto Sandwhich" class="food-img">
+                    <h3>Chicken Pesto Sandwhich</h3>
+                    <p> Country rustic sourdough bread with housemade pesto, topped with juicy chicken breast and mozarella</p>
+                    <p class="price">$11.99</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+            </section>
+
+            <h2>BEVERAGES</h2>
+            <section class="menu-grid beverage-grid">
+                <div class="menu-item" data-category="beverage" data-name= "Iced Chai" data-price="5.49">
+                    <img src="images/chai.jpg" alt="Iced Chai" class="food-img">
+                    <h3> Iced Chai </h3>
+                    <p> Smooth black tea blended with sweet chai spices and creamy milk over ice</p>
+                    <p class="price">$5.49</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverage" data-name= "Iced Matcha" data-price="6.49">
+                    <img src="images/matcha.jpg" alt="Iced Matcha" class="food-img">
+                    <h3> Iced Matcha </h3>
+                    <p> Velvety ceremonial grade matcha green tea whisked with milk and poured over ice</p>
+                    <p class="price">$6.49</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverage" data-name= "Hot Coffee" data-price="3.49">
+                    <img src="images/coffee.jpg" alt="Hot cup of coffee" class="food-img">
+                    <h3> Hot Coffee - Dark Roast </h3>
+                    <p> Dark roast coffee brewed with imported Tanzanian coffee beans</p>
+                    <p class="price">$3.49</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+            </section> 
+
+            <h2>DESSERTS</h2>
+            <section class="menu-grid dessert-grid">
+                <div class="menu-item" data-category="dessert" data-name= "Tres Leches Cake" data-price="5.99">
+                    <img src="images/tresleches.jpg" alt="Slice of Tres Leches Cake" class="food-img">
+                    <h3> Tres Leches Cake </h3>
+                    <p> Sponge cake soaked in evaporated, condensed, and whole milk. Topped with whipped cream and fresh strawberries</p>
+                    <p class="price">$5.99</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="dessert" data-name= "Milhojas Slice" data-price="6.49">
+                    <img src="images/milhojas.jpg" alt="Slice of Milhojas Cake" class="food-img">
+                    <h3> Milhojas Slice </h3>
+                    <p> Layers of puff pastry filled with whipped cream and topped with assorted fruit medley</p>
+                    <p class="price">$6.49</p>
+                    <input type="number" class="qty-input" min="1" style="display: none;">
+                    <div class="input-cancel">
+                        <input type="number" class="qty-input" min="1" style="display: none;">
+                        <div class="check-it" style="display: none;">✅</div>
+                        <div class="cancel-x" style="display: none;">❌</div>
+                    </div>
+                </div>
+            </section> 
+        </main>
+        <aside class="side-bar">
+            <!-- Live Order Sidebar -->
+            <section class="live-order">
+                <h2 class = "Live">Live Order</h2>
+                <div class="entree-sb">
+                    <h3>Entrées</h3>
+                    <ul id="entree-list"></ul>
+                </div>
+                <div class="dessert-sb">
+                    <h3>Desserts</h3>
+                    <ul id="dessert-list"></ul>
+                </div>
+                <div class="beverage-sb">
+                    <h3>Beverages</h3>
+                    <ul id="beverage-list"></ul>
+                </div>
+            </section>
+
+            <!-- Placeholder for Receipt (used in Activity 11) -->
+            <section class="receipt-section">
+                <h2 class = "Receipt">Receipt</h2>
+                <div id="receiptOutput"></div>
+            </section>
+            
+            <section class="order-form"> 
+                <h2 class= "Order"> Place Your Order </h2>
+                <form method="get" action="success.html">
+                    <fieldset> 
+                        <legend> Customer Info </legend>
+            
+                        <label for="name"> Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+                        <label for="phone"> Phone Number: </label>
+                        <input type="tel" id="phone" name="phone" placeholder = "541-123-4567">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend> Add-ons: </legend>
+                        <label><input type="checkbox" name="addons[]" value="extra cheese"> Extra Cheese ($1)</label>
+                        <label><input type="checkbox" name="addons[]" value="extra sauce"> Extra Sauce (free)</label>
+                        <label><input type="checkbox" name="addons[]" value="extra meat"> Extra Meat ($3)</label>
+                     </fieldset>
+
+                    <fieldset>
+                        <legend> Dining Preferences </legend>
+
+                        <label><input type="radio" id="pickup" name="dining" value="Pick-Up" required>Pick-up</label>
+                        <label><input type="radio" id="delivery" name="dining" value="Delivery">Delivery</label>
+                        <label><input type="radio" id="eat-in" name="dining" value="Eat-In">Eat-in</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend> Tip </legend>
+
+                        <label><input type="radio" id="10" name="tip" value="10">10%</label>
+                        <label><input type="radio" id="15" name="tip" value="15">15%</label>
+                        <label><input type="radio" id="20" name="tip" value="20">20%</label>
+                    </fieldset>
+                    <input type="hidden" name="orderJson" id="orderJson">
+                    <input type="submit" id="submit" value="Submit Order">
+                    <input type="button" id="previewBtn" value="Preview Receipt">
+                </form>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        <p> © 2026 Created by: Nathan Carrillo | info@nacbakery.com | (123)-456-7890 </p>
+    </footer>
+    <script src="js/menu-interact.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+h1.Title {
+  font-family: serif;
+  font-size: 2.5em;
+  font-weight: bolder;
+  text-align: center;
+}
+
+header {
+  border-bottom: 2px solid #3b9861;
+}
+
+#Menu {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 0.4em;
+}
+
+th {
+  background-color: rgb(77, 150, 110); 
+}
+
+h2.food {
+  color: rgb(21, 143, 76); 
+  font-size: 1.5em;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: rgb(21, 143, 76); 
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+}
+
+#entree-table {
+  border: 2px solid rgb(11, 111, 56);
+  padding: 0.1em;
+  background-color: rgb(255, 255, 255);
+}
+  
+#drink-table {
+  border: 2px solid rgb(11, 111, 56);
+  padding: 0.1em;
+  background-color: rgb(255, 255, 255);
+}
+  
+#dessert-table {
+  border: 2px solid rgb(11, 111, 56);
+  padding: 0.1em;
+  background-color: rgb(255, 255, 255);
+}
+
+.food-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 0;
+  margin: 0;
+}
+  
+nav li {
+  font-weight: bold;
+}
+  
+nav li a {
+  display: block;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav li a:hover:not(.active) {
+  color: rgb(21, 143, 76); 
+}
+
+nav li a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: rgb(21, 143, 76); 
+  text-underline-offset: 2px;
+}
+
+h2.Order {
+  color: rgb(21, 143, 76); 
+  font-size: 1.6em;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+fieldset {
+  border: 2px solid #3b9861;
+  padding: 10px;
+  margin-bottom: 10px;
+  
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+input[type="tel"] {
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button,
+input[type="submit"], input[type="button"]{
+  background-color: #1e814b;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: #12512f;
+}
+
+/* The main container that holds both the hours section and the map section side by side */
+.info-container {
+  display: flex;
+  gap: 10rem;
+  align-items: flex-start;
+} 
+
+/* The left column (Hours & Delivery info) */ 
+.hours-display {
+  flex: 1;
+  padding: 1rem;
+} 
+
+/* The right column (Map + controls) */
+.map-display {
+  flex: 2;
+}
+
+
+/* Hide all map boxes by default */
+.city1-box, .city2-box, .city3-box {
+  display: none;
+}
+
+
+/* ⚠️ IMPORTANT: For this to work, the <input> and .map-box must be siblings
+   inside the same container (.map-display) — not nested in another div. */
+
+/* Makes map images responsive and clean */
+ .city-map {
+  width: 100%;
+  max-width: 400px;
+  padding-top: 0.7em;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  margin: auto;
+}
+
+.city-map:hover {
+  transform: scale(1.05);
+}
+
+.map-box {
+  padding: 2px;
+  border-radius: 2px;
+}
+
+/* Styles each radio button and its label inline */
+.map-display label {
+  margin-right: 1rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+} 
+
+.review-stars {
+  color: goldenrod;
+  letter-spacing: 0.3em;
+}

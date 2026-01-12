@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-custom-carrilln.css">
+    <link rel="stylesheet" href="styles/weather-map-style.css">
+    
+    <meta charset="UTF-8">
+    <title>NAC Bakery - Home</title>
+</head>
+<body>
+    <header>
+        <h1 class = "Title">NAC Bakery</h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu-order.html">Interactive Order</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to NAC Bakery!</h2>
+        <p>
+            Welcome to NAC Bakery, your cozy neighborhood café where every bite feels like home! 
+            We specialize in freshly baked goods, handcrafted lunch items, and mouth-watering beverages. 
+            Whether you're stopping by for a morning coffee, a sweet treat, or a hearty meal, 
+            we promise to make your experience delightful. Come visit us and taste the difference!
+        </p>
+        <aside> Fun fact: I started cooking as early as 4 years old! </aside>
+        <h2 id ="open-status"> Loading... </h2>
+        <div class="info-container">
+            <div class="hours-display" id="hours-display">
+              <h3> - Dining Hours -</h3>
+                <p> Monday -- 8AM to 6PM</p>
+                <p> Tuesday -- 8AM to 6PM</p>
+                <p> Wednesday -- 10AM to 6PM</p>
+                <p> Thursday -- 8AM to 6PM</p>
+                <p> Friday -- 8AM to 4PM</p>
+                <p> Saturday/Sunday -- CLOSED</p>
+
+                <h3> - Delivery Hours - </h3>
+                <p> Monday -- 10 AM to 4 PM </p>
+                <p> Tuesday -- 10 AM to 4 PM </p>
+                <p> Wednesday -- 12 PM to 4 PM </p>
+                <p> Thursday -- 10 AM to 4 PM </p>
+                <p> Friday -- 10 AM to 2 PM </p>
+                <p> Saturday/Sunday -- CLOSED</p>
+
+                <h3> - Current Conditions - </h3>
+            </div>
+          
+            <div class="map-display">
+                <h3> -- Bakery Locations -- </h3>
+                <input type="radio" name="city" id="city1" checked>
+                <label for="city1">Aurora, OR</label>
+          
+                <input type="radio" name="city" id="city2">
+                <label for="city2">LA, CA</label>
+          
+                <input type="radio" name="city" id="city3">
+                <label for="city3">Roswell, NM</label>
+          
+                <div class="map-box">
+                    <div class="map-label" id="map-address">123 Infinite St, Aurora OR</div>
+                    <a id="map-link" href="https://www.google.com/maps/d/u/1/edit?mid=1I34Nqd4R-NOOSx4pNmhZNgd1yg1GMpk&usp=sharing" target="_blank">
+                        <img id="map-image" src="images/map-aurora.jpg" alt="Map of Aurora Oregon" class="city-map">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="weather-display">
+            <div class = "weather-main"></div>
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <span id="temperature">Temp Loading...</span>
+            </div>
+            <div id="patio-status">Patio Status Loading...</div>
+        </div>
+    </main>
+    <footer>
+        <p> © 2026 Created by: Nathan Carrillo | info@nacbakery.com | (123)-456-7890 </p>
+    </footer>
+    <script src="js/weather-time.js" defer></script>
+</body>
+</html>
